@@ -1,0 +1,66 @@
+%YAML 1.1
+---
+name: $name
+uuid: $uuid
+settings:
+
+# Editor settings
+# Selection highlight is based on discussion at
+# https://github.com/SublimeColors/Solarized/pull/29
+- settings:
+    background: $base03
+    caret: $base0
+    foreground: $base0
+    invisibles: $base02
+    lineHighlight: $base02
+    selection: $base00
+    selectionForeground: $base03
+    selectionBorder: $base01
+
+# Root groups
+# http://manual.macromates.com/en/language_grammars.html
+- name: Comment
+  scope: comment
+  settings:
+    fontStyle: italic
+    foreground: $base01
+
+- name: Constant
+  scope: constant, support.constant
+  settings:
+    foreground: $cyan
+
+- name: Entity
+  scope: entity
+  settings:
+    foreground: $blue
+
+- name: Invalid
+  scope: invalid
+  settings:
+    foreground: $red
+
+- name: Keyword
+  scope: keyword
+  settings:
+    foreground: $green
+
+- name: Storage
+  scope: storage
+  settings:
+    foreground: $yellow
+
+- name: String
+  scope: string
+  settings:
+    foreground: $cyan
+
+- name: Support
+  scope: support
+  settings:
+    foreground: $yellow
+
+- name: Variable
+  scope: variable
+  settings:
+    foreground: $blue

@@ -1,0 +1,50 @@
+# Markup
+- name: Markup underline
+  scope: markup.underline
+  settings:
+    foreground: $yellow
+
+- name: Markup bold
+  scope: markup.bold
+  settings:
+    fontStyle: bold
+
+- name: Markup heading
+  scope: markup.heading
+  settings:
+    foreground: $orange
+
+- name: Markup italic
+  scope: markup.italic
+  settings:
+    fontStyle: italic
+
+- name: Markup block quote
+  scope: markup.quote, markup.raw
+  settings:
+    foreground: $cyan
+
+- name: Markup deleted
+  scope: markup.deleted
+  settings:
+    foreground: $red
+
+- name: Markup inserted
+  scope: markup.inserted
+  settings:
+    foreground: $green
+
+- name: Markup changed
+  scope: markup.changed
+  settings:
+    foreground: $blue
+
+- name: Markup ignored
+  scope: markup.ignored
+  settings:
+    foreground: $base01
+
+- name: Markup untracked
+  scope: markup.untracked
+  settings:
+    foreground: $base01
