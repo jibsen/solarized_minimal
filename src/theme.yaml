@@ -6,6 +6,20 @@ uuid: $uuid
 author: Joergen Ibsen
 comment: Based on the Solarized palette by Ethan Schoonover
 
+# http://lists.macromates.com/textmate/2012-December/035774.html
+semanticClass: theme.$style.solarized.minimal
+
+# https://github.com/aziz/tmTheme-Editor/issues/15
+colorSpaceName: sRGB
+
+# https://github.com/textmate/textmate/blob/master/Applications/TextMate/about/Changes.md#2012-09-09-a9303
+gutterSettings:
+  background: $base03
+  divider: $base02
+  foreground: $base01
+  selectionBackground: $base02  # active line(s) highlight
+  selectionForeground: $base1   #
+
 # Start of the settings array
 settings:
 
