@@ -32,25 +32,25 @@ settings:
     findHighlightForeground: $base03
 
     # https://www.sublimetext.com/forum/viewtopic.php?f=3&t=8692
-    bracketsForeground: $base1        # color when caret on bracket
-    bracketsOptions: underline        # foreground to change bracket color
-    bracketContentsForeground: $base0 # color of brackets containing caret
+    bracketsForeground: $base1         # color when caret on bracket
+    bracketsOptions: underline         # foreground to change bracket color
+    bracketContentsForeground: $base0  # color of brackets containing caret
     bracketContentsOptions: underline
     tagsForeground: $base0
     tagsOptions: stippled_underline
 
     # http://www.sublimetext.com/forum/viewtopic.php?f=3&t=14672
-    guide: $base02       # color used for all guides if draw_normal
-    stackGuide: $base02  # color of inactive guides if draw_active
-    activeGuide: $base01 # color of active guide if draw_active
+    guide: $base02        # color used for all guides if draw_normal
+    stackGuide: $base02   # color of inactive guides if draw_active
+    activeGuide: $base01  # color of active guide if draw_active
 
     # https://www.sublimetext.com/forum/viewtopic.php?f=3&t=6161
     gutter: $base03
     gutterForeground: $base01
 
     # http://www.sublimetext.com/forum/viewtopic.php?f=2&t=1578
-    minimapBorder: $base01 # edge around current view when hovering minimap
-    shadow: $base02        # edge between text and minimap if long lines
+    minimapBorder: $base01  # edge around current view when hovering minimap
+    shadow: $base02         # edge between text and minimap if long lines
 
 # Root groups
 # http://manual.macromates.com/en/language_grammars.html
