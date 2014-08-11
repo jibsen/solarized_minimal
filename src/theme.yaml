@@ -19,6 +19,8 @@ settings:
     selection: $base00
 
     # Sublime Text specific
+    # (some of these are the same as the defaults, but they serve as
+    # documentation for myself)
 
     # Selection highlight is based on discussion at
     # https://github.com/SublimeColors/Solarized/pull/29
