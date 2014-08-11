@@ -3,6 +3,8 @@
 # Solarized Minimal theme for Sublime Text
 name: Solarized Minimal ($style)
 uuid: $uuid
+author: Joergen Ibsen
+comment: Based on the Solarized palette by Ethan Schoonover
 settings:
 
 # Editor settings
