@@ -5,9 +5,11 @@ name: Solarized Minimal ($style)
 uuid: $uuid
 author: Joergen Ibsen
 comment: Based on the Solarized palette by Ethan Schoonover
+
+# Start of the settings array
 settings:
 
-# Editor settings
+# General editor settings
 - settings:
     background: $base03
     caret: $base1
