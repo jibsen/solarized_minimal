@@ -10,7 +10,7 @@ settings:
 # https://github.com/SublimeColors/Solarized/pull/29
 - settings:
     background: $base03
-    caret: $base0
+    caret: $base1
     foreground: $base0
     invisibles: $base02
     lineHighlight: $base02
