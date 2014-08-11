@@ -8,8 +8,6 @@ comment: Based on the Solarized palette by Ethan Schoonover
 settings:
 
 # Editor settings
-# Selection highlight is based on discussion at
-# https://github.com/SublimeColors/Solarized/pull/29
 - settings:
     background: $base03
     caret: $base1
@@ -17,6 +15,11 @@ settings:
     invisibles: $base02
     lineHighlight: $base02
     selection: $base00
+
+    # Sublime Text specific
+
+    # Selection highlight is based on discussion at
+    # https://github.com/SublimeColors/Solarized/pull/29
     selectionForeground: $base03
     selectionBorder: $base01
 
