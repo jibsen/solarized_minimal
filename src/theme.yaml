@@ -1,7 +1,7 @@
 %YAML 1.1
 ---
 # Solarized Minimal theme for Sublime Text
-name: $name
+name: Solarized Minimal ($style)
 uuid: $uuid
 settings:
 

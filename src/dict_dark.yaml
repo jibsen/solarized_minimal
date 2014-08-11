@@ -2,7 +2,7 @@
 ---
 # Dictionary for generating Solarized Minimal dark theme
 # (based on http://ethanschoonover.com/solarized)
-name: Solarized Minimal (dark)
+style: dark
 uuid: 15e8104e-e597-46d7-bb69-0fb09e4bf4d5
 base03: '#002b36'
 base02: '#073642'
