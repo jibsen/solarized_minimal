@@ -18,6 +18,22 @@ The tmTheme files are generated from the [YAML][] files in `src` using
 [yamltotm]: https://github.com/jibsen/yamltotm
 
 
+TextMate Compatibility
+----------------------
+
+This theme should work with [TextMate](http://macromates.com/) as well, except
+for the selection highlight.
+
+As far as I can tell, TextMate only allows you to set the background color of
+selections (the `selection` key), and I do not feel there is a color in the
+Solarized palette that is both pleasant, easily visible, and allows all
+selected text to be read. See discussion related to this issue
+[here](https://github.com/deplorableword/textmate-solarized/issues/52).
+
+If you want to use the theme with TextMate, you will have to set `selection`
+to some value that works for you.
+
+
 License
 -------
 
