@@ -2,29 +2,84 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>author</key>
+	<string>Joergen Ibsen</string>
+	<key>colorSpaceName</key>
+	<string>sRGB</string>
+	<key>comment</key>
+	<string>Based on the Solarized palette by Ethan Schoonover</string>
+	<key>gutterSettings</key>
+	<dict>
+		<key>background</key>
+		<string>#002b36</string>
+		<key>divider</key>
+		<string>#073642</string>
+		<key>foreground</key>
+		<string>#586e75</string>
+		<key>selectionBackground</key>
+		<string>#073642</string>
+		<key>selectionForeground</key>
+		<string>#93a1a1</string>
+	</dict>
 	<key>name</key>
 	<string>Solarized Minimal (dark)</string>
+	<key>semanticClass</key>
+	<string>theme.dark.solarized.minimal</string>
 	<key>settings</key>
 	<array>
 		<dict>
 			<key>settings</key>
 			<dict>
+				<key>activeGuide</key>
+				<string>#586e75</string>
 				<key>background</key>
 				<string>#002b36</string>
-				<key>caret</key>
+				<key>bracketContentsForeground</key>
 				<string>#839496</string>
+				<key>bracketContentsOptions</key>
+				<string>underline</string>
+				<key>bracketsForeground</key>
+				<string>#93a1a1</string>
+				<key>bracketsOptions</key>
+				<string>underline</string>
+				<key>caret</key>
+				<string>#93a1a1</string>
+				<key>findHighlight</key>
+				<string>#839496</string>
+				<key>findHighlightForeground</key>
+				<string>#002b36</string>
 				<key>foreground</key>
 				<string>#839496</string>
+				<key>guide</key>
+				<string>#073642</string>
+				<key>gutter</key>
+				<string>#002b36</string>
+				<key>gutterForeground</key>
+				<string>#586e75</string>
+				<key>inactiveSelection</key>
+				<string>#586e75</string>
+				<key>inactiveSelectionForeground</key>
+				<string>#002b36</string>
 				<key>invisibles</key>
 				<string>#073642</string>
 				<key>lineHighlight</key>
 				<string>#073642</string>
+				<key>minimapBorder</key>
+				<string>#586e75</string>
 				<key>selection</key>
 				<string>#657b83</string>
 				<key>selectionBorder</key>
 				<string>#586e75</string>
 				<key>selectionForeground</key>
 				<string>#002b36</string>
+				<key>shadow</key>
+				<string>#073642</string>
+				<key>stackGuide</key>
+				<string>#073642</string>
+				<key>tagsForeground</key>
+				<string>#839496</string>
+				<key>tagsOptions</key>
+				<string>stippled_underline</string>
 			</dict>
 		</dict>
 		<dict>
