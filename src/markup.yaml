@@ -2,7 +2,7 @@
 - name: Markup underline
   scope: markup.underline
   settings:
-    foreground: $yellow
+    foreground: $violet
 
 - name: Markup bold
   scope: markup.bold
