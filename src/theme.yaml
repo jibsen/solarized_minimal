@@ -91,6 +91,11 @@ settings:
   settings:
     foreground: $red
 
+- name: Invalid deprecated
+  scope: invalid.deprecated
+  settings:
+    foreground: $magenta
+
 - name: Keyword
   scope: keyword
   settings:
