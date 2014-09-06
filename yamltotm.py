@@ -1,17 +1,38 @@
 #!/usr/bin/env python3
 
+# Copyright (c) 2014 Joergen Ibsen
+#
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
+# to deal in the Software without restriction, including without limitation
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+# DEALINGS IN THE SOFTWARE.
+
 """
 Convert YAML to tmTheme format.
 
-Reads a theme in YAML format and outputs tmTheme plist format used in
-TextMate and Sublime Text.
+Reads files YAML format and outputs tmTheme plist format used in TextMate and
+Sublime Text.
 
 Input files are concatenated.
 
 An optional dictionary file (in YAML format), can be used to translate
 strings.
 
-Note: Uses plistlib interface introduced in Python 3.4.
+Note:
+    Uses plistlib interface introduced in Python 3.4.
 """
 
 import argparse
@@ -26,8 +47,14 @@ FileRange = collections.namedtuple('FileRange', 'lo hi name')
 
 
 class MultiFile:
-    """
-    Array of lines from multiple files.
+    """List of lines from multiple files.
+
+    Args:
+        filenames: List of filenames.
+        mode: File open mode.
+
+    Attributes:
+        lines: List of lines from all files.
     """
 
     def __init__(self, filenames=None, mode='r'):
@@ -40,10 +67,11 @@ class MultiFile:
         return iter(self.lines)
 
     def add_files(self, filenames, mode='r'):
-        """
-        Add lines from files to end of MultiFile.
+        """Add lines from files to end of MultiFile.
 
-        :param filenames: List of filenames
+        Args:
+            filenames: List of filenames.
+            mode: File open mode.
         """
         base = len(self.lines)
         for name in filenames:
@@ -53,12 +81,13 @@ class MultiFile:
                 base = len(self.lines)
 
     def lookup_line(self, n):
-        """
-        Look up filename and line number from line index.
+        """Look up filename and line number from line index.
 
-        :param n: Absolute index of line (starting at 0)
-        :rtype: (str, int) or None
-        :return: Filename and line number (starting at 1)
+        Args:
+            n: Absolute index of line (starting at 0).
+
+        Returns:
+            (str, int) or None: Filename and line number (starting at 1).
         """
         for f in self._files:
             if n >= f.lo and n < f.hi:
@@ -93,9 +122,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Convert YAML to tmTheme.')
     parser.add_argument('-d', '--dict', type=argparse.FileType('r'),
                         help='YAML dictionary file')
-    parser.add_argument('infile', nargs='+', help='YAML theme file')
+    parser.add_argument('infile', nargs='+', help='YAML scheme file')
     parser.add_argument('outfile', type=argparse.FileType('wb'),
-                        help='tmTheme theme file')
+                        help='tmTheme scheme file')
     args = parser.parse_args()
 
     # if user supplied a dictionary, read it and add our own constructor
@@ -110,7 +139,7 @@ if __name__ == '__main__':
 
     # load YAML and write tmTheme plist
     try:
-        theme = yaml.safe_load(''.join(_mf.lines))
+        scheme = yaml.safe_load(''.join(_mf.lines))
     except yaml.YAMLError as e:
         if hasattr(e, 'problem_mark'):
             name, line = _mf.lookup_line(e.problem_mark.line)
@@ -118,4 +147,4 @@ if __name__ == '__main__':
         else:
             print('YAML error:', e)
     else:
-        plistlib.dump(theme, args.outfile)
+        plistlib.dump(scheme, args.outfile)
